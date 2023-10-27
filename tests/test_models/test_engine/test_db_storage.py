@@ -1,5 +1,8 @@
 #!/usr/bin/python3
 """test for file storage"""
+""" Test .get() and .count() methods
+"""
+from models import storage
 import unittest
 import pep8
 import json
