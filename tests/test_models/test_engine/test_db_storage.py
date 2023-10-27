@@ -88,24 +88,24 @@ if __name__ == "__main__":
 
     def test_get(self):
         """ tests method for obtaining an instance db storage"""
-        storagee = DBstorage()
-        dicc = {"name":"laila"}
-        instance = state(**dicc)
-        storagee.new(instance)
-        storagee.save()
-        get_instance = storagee.get(state, instance.id)
+        storage = DBstorage()
+        dic = {"name":"laila"}
+        instance = state(**dic)
+        storage.new(instance)
+        storage.save()
+        get_instance = storage.get(state, instance.id)
         self.assertEqual(get_instance, instance)
 
     def test_count(self):
         """ tests count method db storage"""
-        storagee = DBstorage()
-        dicc = {"name":"khaoula"}
-        instance = state(**dicc)
-        storagee.new(instance)
-        storagee.new(state)
-        dicc = {"name":"khaoulita","state_id": state.id}
-        city = City(**dicc)
-        storagee.new(city)
-        storagee.save()
-        c = storagee.count()
-        self.assertEqual(len(storagee.all()), c)
+        storage = DBstorage()
+        dic = {"name":"khaoula"}
+        instance = State(**dic)
+        storage.new(instance)
+        storage.new(State)
+        dic = {"name":"khaoulita","state_id": state.id}
+        city = City(**dic)
+        storage.new(city)
+        storage.save()
+        c = storage.count()
+        self.assertEqual(len(storage.all()), c)
