@@ -100,7 +100,7 @@ if __name__ == "__main__":
     def test_get(self):
         """ tests method for obtaining an instance db storage"""
         storage = FileStorage()
-        dic = {"name": "laila"}
+        dic = {"name": "Vecindad"}
         instance = State(**dic)
         storage.new(instance)
         storage.save()
@@ -112,11 +112,11 @@ if __name__ == "__main__":
     def test_count(self):
         """ tests method for obtaining an instance db storage"""
         storage = FileStorage()
-        dic = {"name": "khaoula"}
+        dic = {"name": "Vencidad"}
         instance = State(**dic)
         storage.new(instance)
         storage.new(State)
-        dic = {"name":"khaoulita"}
+        dic = {"name":"Mexico"}
         city = City(**dic)
         storage.new(city)
         storage.save()
