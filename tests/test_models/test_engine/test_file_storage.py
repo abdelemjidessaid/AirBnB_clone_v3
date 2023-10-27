@@ -113,3 +113,61 @@ class TestFileStorage(unittest.TestCase):
         with open("file.json", "r") as f:
             js = f.read()
         self.assertEqual(json.loads(string), json.loads(js))
+
+    @unittest.skipIf(models.storage_t == 'db', 'not testing file storage')
+    def test_get(self):
+        """
+        test get function that properly gets the specific object
+        by its it.
+        """
+
+        storage = models.storage
+        state = State(name='Beni Mellal - Khnifra')
+        state.save()
+
+        ret_state = storage.get(State, state.id)
+        self.assertIsNotNone(ret_state)
+        self.assertEqual(state.id, ret_state.id)
+        self.assertEqual(state.name, ret_state.name)
+
+        self.assertIsNot(state.id, storage.get(State, state.id + '97'))
+
+        obj = storage.get(State, None)
+        self.assertIsNone(obj)
+        obj = storage.get(None, None)
+        self.assertIsNone(obj)
+        self.assertIsNone(storage.get(State, ''))
+        self.assertIsNone(storage.get(State, 20))
+        self.assertIsNone(storage.get(State, state.id + '97'))
+
+        with self.assertRaises(TypeError):
+            storage.get(State)
+        with self.assertRaises(TypeError):
+            storage.get()
+        with self.assertRaises(TypeError):
+            storage.get(self, 'id', 'another_id')
+
+    @unittest.skipIf(models.storage_t == 'db', 'not testing file storage')
+    def test_count(self):
+        """
+        test count function if retrieves the count of saved
+        objects is correct
+        """
+
+        storage = models.storage
+        self.assertIs(type(storage.count()), int)
+        self.assertIs(type(storage.count(None)), int)
+        self.assertIs(type(storage.count(State)), int)
+        self.assertIs(type(storage.count(City)), int)
+        self.assertEqual(storage.count(), storage.count(None))
+
+        State(name='Casa').save()
+        self.assertGreater(storage.count(State), 0)
+        self.assertEqual(storage.count(None), storage.count())
+
+        current_count = storage.count(City)
+        City(name='Kasba Tadla').save()
+        self.assertGreater(storage.count(City), current_count)
+
+        with self.assertRaises(TypeError):
+            storage.count(City, 15)
