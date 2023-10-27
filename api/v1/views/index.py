@@ -17,5 +17,3 @@ from models.user import User
 def get_status():
     """retrieves the status of api"""
     return jsonify(status="ok")
-
-

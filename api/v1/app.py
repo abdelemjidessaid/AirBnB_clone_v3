@@ -23,6 +23,7 @@ def teardown_flask(exception):
     """close the storage after when app finished"""
     storage.close()
 
+
 @app.errorhandler
 def error_404(error):
     """function that handles the 404 error"""
