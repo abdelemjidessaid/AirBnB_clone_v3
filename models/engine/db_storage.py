@@ -2,9 +2,6 @@
 """
 Contains the class DBStorage
 """
-""" Test .get() and .count() methods
-"""
-from models import storage
 import models
 from models.amenity import Amenity
 from models.base_model import BaseModel, Base

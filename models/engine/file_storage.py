@@ -2,9 +2,6 @@
 """
 Contains the FileStorage class
 """
-""" Test .get() and .count() methods
-"""
-from models import storage
 import json
 from models.amenity import Amenity
 from models.base_model import BaseModel
