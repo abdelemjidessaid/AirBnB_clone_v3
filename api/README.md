@@ -917,7 +917,7 @@ You will update it later when you will deploy your API to production.
 
 Now you can see this HTTP Response Header: `< Access-Control-Allow-Origin: 0.0.0.0`
 
-<br>________________________________________________________________________________<br>
+<br><br>
 
 ```
 guillaume@ubuntu:~/AirBnB_v3$ curl -X GET http://0.0.0.0:5000/api/v1/cities/1da255c0-f023-4779-8134-2b1b40f87683 -vvv
