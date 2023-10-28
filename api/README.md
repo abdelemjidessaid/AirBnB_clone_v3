@@ -36,7 +36,7 @@ For this project, we expect you to look at these concepts:
 
 
 
-<br><br>
+<br>________________________________________________________________________________<br>
 
 # Resources
 
@@ -82,7 +82,7 @@ General
 
 
 
-<br><br>
+<br>________________________________________________________________________________<br>
 
 # Requirements
 
@@ -121,7 +121,7 @@ General
 
 
 
-<br><br>
+<br>________________________________________________________________________________<br>
 
 
 # More Info
@@ -139,7 +139,7 @@ $ pip3 install Flask
 ```
 
 
-<br><br>
+<br>________________________________________________________________________________<br>
 
 # Tasks
 
@@ -166,7 +166,7 @@ For this project you will fork this codebase:
 
 
 
-<br><br>
+<br>________________________________________________________________________________<br>
 
 ### 1. Never fail!
 
@@ -202,7 +202,7 @@ guillaume@ubuntu:~/AirBnB_v3$
 * GitHub repository: `AirBnB_clone_v3`
 
 
-<br><br>
+<br>________________________________________________________________________________<br>
 
 
 ### 2. Improve storage
@@ -263,7 +263,7 @@ For this task, you <b>must</b> make a pull request on GitHub.com, and ask at lea
 
 
 
-<br><br>
+<br>________________________________________________________________________________<br>
 
 
 ### 3. Status of your API
@@ -328,9 +328,10 @@ Ok, let starts:
 
 
 
-<br><br>
+<br>________________________________________________________________________________<br>
 
-# 4. Some stats?
+
+### 4. Some stats?
 
 
 Create an endpoint that retrieves the number of each objects by type:
@@ -361,7 +362,7 @@ guillaume@ubuntu:~/AirBnB_v3$
 
 
 
-<br><br>
+<br>________________________________________________________________________________<br>
 
 ### 5. Not found
 
@@ -407,7 +408,7 @@ guillaume@ubuntu:~/AirBnB_v3$
 
 
 
-<br><br>
+<br>________________________________________________________________________________<br>
 
 ### 6. State 
 
@@ -539,7 +540,7 @@ guillaume@ubuntu:~/AirBnB_v3$
 
 
 
-<br><br>
+<br>________________________________________________________________________________<br>
 
 
 ### 7. City
@@ -694,7 +695,7 @@ guillaume@ubuntu:~/AirBnB_v3$
 
 
 
-<br><br>
+<br>________________________________________________________________________________<br>
 
 ### 8. Amenity
 
@@ -740,7 +741,7 @@ Updates a `Amenity` object: `PUT /api/v1/amenities/<amenity_id>`
 
 
 
-<br><br>
+<br>________________________________________________________________________________<br>
 
 ### 9. User
 
@@ -788,7 +789,7 @@ Updates a `User` object: `PUT /api/v1/users/<user_id>`
 
 
 
-<br><br>
+<br>________________________________________________________________________________<br>
 
 ### 10. Place
 
@@ -839,7 +840,7 @@ Updates a `Place` object: `PUT /api/v1/places/<place_id>`
 * File: `api/v1/views/places.py`, `api/v1/views/__init__.py`
 
 
-<br><br>
+<br>________________________________________________________________________________<br>
 
 
 ### 11. Reviews
@@ -893,7 +894,7 @@ Updates a `Review` object: `PUT /api/v1/reviews/<review_id>`
 
 
 
-<br><br>
+<br>________________________________________________________________________________<br>
 
 ### 12. HTTP access control (CORS)
 
@@ -916,7 +917,7 @@ You will update it later when you will deploy your API to production.
 
 Now you can see this HTTP Response Header: `< Access-Control-Allow-Origin: 0.0.0.0`
 
-<br><br>
+<br>________________________________________________________________________________<br>
 
 ```
 guillaume@ubuntu:~/AirBnB_v3$ curl -X GET http://0.0.0.0:5000/api/v1/cities/1da255c0-f023-4779-8134-2b1b40f87683 -vvv
@@ -960,7 +961,7 @@ guillaume@ubuntu:~/AirBnB_v3$
 
 
 
-<br><br>
+<br><br>________________________________________ Advanced Tasks ________________________________________<br><br>
 
 
 ### 13. Place - Amenity
@@ -1003,7 +1004,7 @@ Link a `Amenity` object to a `Place`: `POST /api/v1/places/<place_id>/amenities/
 
 
 
-<br><br>
+<br>________________________________________________________________________________<br>
 
 
 ### 14. Security improvements!
@@ -1029,7 +1030,7 @@ Repo:
 
 
 
-<br><br>
+<br>________________________________________________________________________________<br>
 
 
 ### 15. Search
